@@ -1,0 +1,15 @@
+{
+"PassengerId": 1,
+"Pclass": "3",
+"Name": "John Smith",
+"Sex": "M", 
+"Age": 23.0, 
+"SibSp": 1,
+"Parch": 4,
+"Ticket": "O300",
+"Fare": 1.25,
+"Cabin": "L300",
+"Embarked": "S" 
+
+}
+
