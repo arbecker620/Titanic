@@ -1,6 +1,4 @@
 
-
-
 docker build -t titanic . 
 
 docker container in -it titanic
