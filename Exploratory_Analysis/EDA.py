@@ -3,7 +3,7 @@ import os
 import json
 
 
-config_path = 'Data/train_config.json' 
+config_path = 'Data/eda_config.json' 
 # Opening JSON file
 data = json.load(open(config_path))
 training_data_FileName =  data['training_data_FileName']
