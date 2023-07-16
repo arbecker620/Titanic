@@ -13,7 +13,7 @@ The project is broken up into seperate compenents
 
 
 
-###Application Programming Interface (API)
+### Application Programming Interface (API) ###
 
 The API is built as a webservice to be hosted using the flask framework. 
 
@@ -33,7 +33,7 @@ $ python app.py
 PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 
 
-###Notebooks
+### Notebooks ###
 
 ro buidl docker image
 
