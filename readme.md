@@ -1,4 +1,4 @@
-###Intro
+### Intro ###
 
 
 This is a project focused on creating stnadrad process and procedures in working on a machine learning model in a source control system. The data or this project is the Titanic dataset due to the avaiability of different modeling techniques and coverage of the use case. 
