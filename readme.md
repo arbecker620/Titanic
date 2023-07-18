@@ -1,13 +1,22 @@
 ### Intro ###
 
+This project is focused on creating standard code and procedures in working on a machine learning system in a source control system. The data for this project is from the Titanic dataset, this is due to the avaiability of different modeling techniques and extensive coverage of the use case. The background information and subsequently various notebooks can be found on the following link [Kaggle Titanic](https://www.kaggle.com/c/titanic)
 
-This is a project focused on creating stnadrad process and procedures in working on a machine learning model in a source control system. The data or this project is the Titanic dataset due to the avaiability of different modeling techniques and coverage of the use case. 
+
+### Requirements ###
+
+The following is  list of software or applicatioons which need to be installed as apart of the project. Python is not installed directly onto the machine you are using but utilized in the docker containers. This is primarily because I use a M1 Macbook Air with 256gb, I want to avoid having as much software installed on the system as much as possible. So I push the install of python into docker so I can use multiple version without dependency issues. 
+
+1. Ide of your choosing
+2. Docker
+3. Terraform
+4. Docker Compose
 
 The project is broken up into seperate compenents 
 
-1. Application Programming Interface
+1. Application Programming Interface (API)
 2. Notebooks
-3. IAC
+3. Infrastructure as Code (IAC)
 4. Data
 5. Train
 
@@ -15,14 +24,12 @@ The project is broken up into seperate compenents
 
 ### Application Programming Interface (API) ###
 
-The API is built as a webservice to be hosted using the flask framework. 
-
-The process for building the API container is the foollowing docker commands. 
-
-docker build -t titanic . 
+The API is built as a webservice to be hosted using the flask framework. The process for building the API container is the following docker commands. 
+`code`
+docker build -t titanic/api -f API/Dockerfile . 
 
 docker container in -it titanic
-
+`code`
 
 
 $ python app.py
