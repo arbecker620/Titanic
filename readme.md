@@ -25,8 +25,10 @@ The project is broken up into seperate compenents
 ### Application Programming Interface (API) ###
 
 The API is built as a webservice to be hosted using the flask framework. The process for building the API container is the following docker commands. 
-`code`
+`
 docker build -t titanic/api -f API/Dockerfile . 
+`
+
 
 docker container in -it titanic
 `code`
