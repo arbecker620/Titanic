@@ -24,32 +24,42 @@ The project is broken up into seperate compenents
 
 ### Application Programming Interface (API) ###
 
-The API is built as a webservice to be hosted using the flask framework. The process for building the API container is the following docker commands. 
-`
-docker build -t titanic/api -f API/Dockerfile . 
-`
+The API is built as a webservice to be hosted using the flask framework. The following commands in docker build the APi Container with the requirements located in the API Folder.  
+
+`docker build -t titanic/api -f API/Dockerfile . `
+
+When specific packages are needed for the API, the adjusts can be made under the requirements.txt file in the API folder. 
+
+The following command will start the container in an interactive mode. 
+
+`docker container run -it titanic/api`
 
 
-docker container in -it titanic
-`code`
-
-
-$ python app.py
+The commands to start the flask service are listed below
+$ python app.py 
 
 
 
-
+### Test ###
+In the API folder, there is a few tests have included 
 PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 
 
 ### Notebooks ###
+The notebooks folder is where the steps invovling explaratory analysis can occur. the commands to start up this component are listed below
 
-ro buidl docker image
 
-docker build -t titanic/eda -f Notebooks/DockerFile . 
+To build docker image
+
+`docker build -t titanic/eda -f Notebooks/DockerFile . `
 
 
 to run Notebooks 
 
 
-docker container run -p 8888:8888 titanic/eda
+`docker container run -p 8888:8888 titanic/eda `
+
+
+### Data ###
+
+As of this moment, the data is downloaded locally and maintained by git. This could be alleviated by when the notebook container is built to pull the data from Kaggle directly instead of keeping a local coppy
