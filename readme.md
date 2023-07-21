@@ -57,7 +57,7 @@ To build docker image
 to run Notebooks 
 
 
-`docker container run -p 8888:8888 titanic/eda `
+`docker container run -p 8888:8888 titanic/eda -v /Users/andrewbecker/Documents/Code_Projects/Titanic/Train:/Notebooks`
 
 
 ### Data ###
