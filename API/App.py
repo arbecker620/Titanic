@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 
 # Create a Flask app
 app = Flask(__name__)
@@ -11,9 +11,11 @@ def hello():
 
 @app.route('/prediction', methods = ['GET', 'POST'])
 def predict():
-    content = request.jsonify
+    if request.method == 'POST':
+        content = request.get_json()
+        
 
-    return content
+    return make_response(jsonify(content), 200)
 
 # Run the app if this script is executed directly
 if __name__ == '__main__':
