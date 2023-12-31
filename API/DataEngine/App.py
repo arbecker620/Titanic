@@ -9,7 +9,7 @@ def hello():
     return 'Hello, World!'
 
 
-@app.route('/dataengine', methods = ['GET'])
+@app.route('/DatEengine', methods = ['GET'])
 def predict():
     if request.method == 'GET':
         content = request.get_json()
