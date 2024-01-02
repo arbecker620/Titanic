@@ -1,0 +1,9 @@
+FROM python:3.8-slim-buster
+
+WORKDIR /app
+
+COPY /API/DataEngine  /app/API/DataEngine
+#ADD titanic /app/
+
+WORKDIR /app/API/DataEngine
+RUN pip3 install -r requirements.txt
