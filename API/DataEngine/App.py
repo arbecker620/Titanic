@@ -36,7 +36,6 @@ def hello():
 @app.route('/passengers', methods = ['GET'])
 """
 This returns back of all of the Passengers, if there is no data to return we get a 500 error.
-
 """
 def get_passengers():
     try:
