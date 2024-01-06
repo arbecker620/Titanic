@@ -5,8 +5,8 @@ app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
 from os import environ
 
-DB_URL= 'postgresql://postgres:postgres@flask_db:5432/postgres'
-app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
+
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
 
 
 db = SQLAlchemy(app)

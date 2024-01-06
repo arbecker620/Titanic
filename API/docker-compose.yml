@@ -1,12 +1,24 @@
 version: "3.9"
 
 services:
-  flask_app:
-    container_name: flask_app
-    image: titanic/api-pe
-    build: .
+  Titanic_DE_API:
+    container_name: Titanic_DE_API
+    image: titanic/api-de
+    build: 
+      context: ./API/DataEngine/ .
     ports:
       - "4000:4000"
+    environment:
+      - DB_URL=postgresql://postgres:postgres@flask_db:5432/postgres
+    depends_on:
+      - flask_db
+  Titanic_PE_API:
+    container_name: Titanic_PE_API
+    image: titanic/api-pe
+    build: 
+      context: ./API/PredictionEngine/ .
+    ports:
+      - "4001:4001"
     environment:
       - DB_URL=postgresql://postgres:postgres@flask_db:5432/postgres
     depends_on:
