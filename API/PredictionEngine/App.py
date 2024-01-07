@@ -42,4 +42,4 @@ def predict():
 
 # Run the app if this script is executed directly
 if __name__ == '__main__':
-    app.run()
+	app.run(host='0.0.0.0', port=4001)
