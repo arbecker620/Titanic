@@ -2,11 +2,11 @@ FROM python:3.8-slim-buster
 
 WORKDIR /app
 
-COPY /API/DataEngine  /app/API/DataEngine
+
+COPY /API/DataEngine/App  /app/API/DataEngine/
 #ADD titanic /app/
 
 WORKDIR /app/API/DataEngine
 RUN pip3 install -r requirements.txt
 
-
-CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
+#CMD ["python3 App.py"]
