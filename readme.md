@@ -1,6 +1,6 @@
 ### Intro ###
 
-This project is focused on creating standard code and procedures in working on a machine learning system in a source control system. The data for this project is from the Titanic dataset, this is due to the avaiability of different modeling techniques and extensive coverage of the use case. The background information and subsequently various notebooks can be found on the following link [Kaggle Titanic](https://www.kaggle.com/c/titanic)
+The focus of this repo and project is to provide an example machine Learning system and the different components. The data for this project is from the Titanic dataset, this is due to the avaiability of different modeling techniques and extensive coverage of the use case. The background information and subsequently various notebooks can be found on the following link [Kaggle Titanic](https://www.kaggle.com/c/titanic)
 
 
 ### Requirements ###
@@ -24,6 +24,10 @@ The project is broken up into seperate compenents
 
 ### Application Programming Interface (API) ###
 
+Below are APIs asscoiated with the project. 
+
+## Prediction Engine ##
+
 The API is built as a webservice to be hosted using the flask framework. The following commands in docker build the APi Container with the requirements located in the API Folder.  
 
 `docker build -t titanic/api -f API/Dockerfile . `
@@ -34,9 +38,10 @@ The following command will start the container in an interactive mode.
 
 `docker container run -it titanic/api`
 
+## Data Engine ##
+This API is built similiar to a CRUD
 
-The commands to start the flask service are listed below
-$ python app.py 
+
 
 
 
